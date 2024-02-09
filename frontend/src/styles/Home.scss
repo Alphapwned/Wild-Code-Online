@@ -1,0 +1,171 @@
+@import "mixins.scss";
+.mainHome{
+  padding: 0 5vh;
+}
+.home-main-container {
+  h1 {
+    text-align: center;
+    color: $primary;
+    font-weight: 900;
+    font-size: 64px;
+  }
+  .home {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    height: 100%;
+    border-bottom: 1px solid $primary;
+    margin-bottom: 3vh;
+    padding-bottom: 3vh;
+    .img-container {
+      min-width: 40%;
+      display: flex;
+      align-items: center;
+      img {
+        max-width: 100%;
+      }
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      min-width: 60%;
+      padding: 0 20px;
+      .content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        justify-content: center;
+        h2 {
+          width: 100%;
+          color: $primary;
+          font-weight: 500;
+          font-size: 58px;
+          margin: 20px 0px;
+        }
+        p {
+          font-size: 16px;
+        }
+        .link-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          margin-top: 3vh;
+          button {
+            width: 200px;
+            text-align: center;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: $rounded-full;
+            border: 1px solid $primary;
+            background-color: $primary;
+            color: $white;
+            font-weight: 500;
+            transition: 0.3s ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $white;
+              color: $primary;
+              border: 1px solid $primary;
+            }
+          }
+          .learn-more {
+            text-decoration: underline;
+            color: $black;
+            font-size: 16px;
+            &:hover {
+              text-decoration: underline;
+              color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include breakpoint("screen") {
+    .home {
+      .container {
+        .content-container {
+          width: 100%;
+          p {
+            margin-top: 1vh;
+          }
+          .link-container {
+            margin-top: 5vh;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint("<screen") {
+    .home {
+      .img-container {
+        display: none;
+      }
+      .container {
+        margin-bottom: 30px;
+        .content-container {
+          h2 {
+            margin-top: 20px;
+            text-align: center;
+          }
+          p {
+            font-size: 18px;
+            text-align: center;
+            margin-top: 1vh;
+          }
+          .link-container {
+            flex-direction: column;
+            margin-top: 5vh;
+            .learn-more {
+              margin-top: 5vh;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint("large-tablet") {
+    .home {
+      .container {
+        .content-container {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint("tablet") {
+    .home {
+      .container {
+        .content-container {
+          width: 100%;
+          h2 {
+            font-size: 48px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint("phone") {
+    h1 {
+      font-weight: 900;
+      font-size: 48px;
+    }
+    .home {
+      .container {
+        .content-container {
+          width: 100%;
+          h2 {
+            font-size: 48px;
+          }
+        }
+      }
+    }
+  }
+}

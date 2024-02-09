@@ -1,0 +1,33 @@
+### List runtimes
+GET http://localhost:2000/api/v2/runtimes
+
+
+### List packages
+GET http://localhost:2000/api/v2/packages
+
+### Install Node.js package
+POST http://localhost:2000/api/v2/packages
+Content-Type: application/json
+
+{
+  "language": "node",
+  "version": "18.15.0"
+}
+
+### Uninstall Node.js package
+DELETE http://localhost:2000/api/v2/packages
+Content-Type: application/json
+
+{
+  "language": "node",
+  "version": "18.15.0"
+}
+
+### Uninstall php package
+DELETE http://localhost:2000/api/v2/packages
+Content-Type: application/json
+
+{
+  "language": "php",
+  "version": "8.2.3"
+}

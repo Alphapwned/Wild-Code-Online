@@ -1,0 +1,42 @@
+@import "../mixins.scss";
+
+.container-global {
+  width: 100%;
+  height: 100%;
+  @include flexCenterColumn;
+  justify-content: flex-start;
+  padding-top: 100px;
+
+  .container-search {
+    width: 35%;
+    margin-bottom: 70px;
+
+    @include breakpoint("<screen") {
+      width: 80%;
+    }
+    @include breakpoint("phone") {
+      width: 100%;
+    }
+  }
+
+  .container-listing-files {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    padding-bottom: 30px;
+
+    @include breakpoint("large-screen") {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include breakpoint("<screen") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 650px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include breakpoint("phone") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

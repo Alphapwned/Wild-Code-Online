@@ -1,0 +1,82 @@
+@import "mixins.scss";
+
+.container-about-us {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid $primary;
+  margin-bottom: 3vh;
+  padding-bottom: 3vh;
+  .title {
+    color: #5340a9;
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .container-description {
+    width: 80%;
+    margin: 15px 0px;
+    h6 {
+      font-size: 25px;
+      margin: 0;
+      padding: 0;
+      @include breakpoint("<screen") {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+    }
+    .content-description-title {
+      margin-bottom: 30px;
+    }
+
+    .content-1 {
+      text-align: right !important;
+
+      @include breakpoint("<screen") {
+        flex-direction: column-reverse;
+        text-align: center !important;
+      }
+    }
+
+    @include breakpoint("<screen") {
+      width: 100%;
+    }
+  }
+
+  .container-description-2 {
+    margin-top: 35px;
+  }
+  .content-img-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    .img {
+      width: 400px;
+      border-radius: 5px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+
+      @include breakpoint(phone) {
+        width: 280px;
+      }
+    }
+    p {
+      max-width: 500px;
+      margin: 0;
+      padding: 0;
+      @include breakpoint("<screen") {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include breakpoint("<screen") {
+      display: flex;
+      flex-direction: column;
+      text-align: center !important;
+    }
+  }
+}

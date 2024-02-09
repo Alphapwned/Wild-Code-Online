@@ -1,0 +1,72 @@
+@import "mixins.scss";
+.interaction-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 5px;
+	width: fit-content;
+	.button {
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 5px;
+		color: $primary;
+		background: $white;
+		border-radius: $rounded-md;
+		border: 1px solid;
+		padding: 3px 12px;
+		&:hover {
+			background: linear-gradient(
+				to bottom,
+				rgba(133, 115, 215, 0.85),
+				#6351b4,
+				#5340a9,
+				#6351b4,
+				rgba(133, 115, 215, 0.85)
+			);
+			color: #fff;
+			cursor: pointer;
+		}
+		.icon {
+			height: 100%;
+			border-right: 1px solid;
+			padding-right: 5px;
+		}
+	}
+
+	.button-clicked {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 5px;
+		border-radius: $rounded-md;
+		border: 1px solid;
+		padding: 3px 12px;
+		background: linear-gradient(
+			to bottom,
+			rgba(133, 115, 215, 0.85),
+			#6351b4,
+			#5340a9,
+			#6351b4,
+			rgba(133, 115, 215, 0.85)
+		);
+		color: #fff;
+		cursor: pointer;
+		.icon {
+			height: 100%;
+			border-right: 1px solid;
+			padding-right: 5px;
+		}
+	}
+	.like {
+		left: 0;
+		position: absolute;
+		visibility: hidden;
+	}
+	.dislike {
+		right: 0;
+		position: absolute;
+		visibility: hidden;
+	}
+}

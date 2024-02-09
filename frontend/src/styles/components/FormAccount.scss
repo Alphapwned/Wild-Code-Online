@@ -1,0 +1,153 @@
+@import "../../mixins.scss";
+.container-global-form-account {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  .container-card-form-account {
+    width: 450px;
+    background-color: #5340a9;
+    border-radius: 15px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+
+    h2 {
+      font-size: 32px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .details-text {
+      max-width: 70%;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .container-input-firstName-lastName {
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          width: 40%;
+        }
+      }
+      input {
+        margin: 14px 0;
+        border-radius: 5px;
+        background-color: #fff;
+        border: none;
+        padding: 15px 15px;
+      }
+
+      .error-input {
+        align-self: flex-start;
+        margin: 0px;
+        padding: 3px 20px;
+        border-radius: 5px;
+        color: #d8000c;
+        background-color: #fec2c2f5;
+        height: auto;
+      }
+
+      .validation-save {
+        background: #59ed9c;
+        color: #00958e;
+        padding: 10px;
+        margin: 10px 0px;
+        border-radius: 5px;
+      }
+      button {
+        align-self: flex-start;
+        padding: 13px 25px;
+        font-size: 16px;
+        margin: 15px 0;
+        border-radius: 5px;
+        border: 1px solid #5340a9;
+        background-color: #fff;
+        color: #5340a9;
+        font-weight: 600;
+        transition: 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #5340a9;
+          color: #fff;
+          border: 1px solid #fff;
+        }
+      }
+    }
+
+    .signup-details a {
+      text-decoration: none;
+      cursor: pointer;
+      color: #849bce;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    span {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .container-global-form-account {
+    .container-card-form {
+      width: 400px;
+      margin-right: 0;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .container-global-form-account {
+    padding-top: 50px;
+    .container-card-form-account {
+      margin: 0px 15px;
+      h2 {
+        font-size: 28px;
+        margin: 0;
+      }
+      .details-text {
+        max-width: 80%;
+      }
+
+      span {
+        font-size: 23px;
+      }
+      .content-sso-signin {
+        flex-direction: column;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .container-global-form-account {
+    .container-card-form-account {
+      form {
+        .container-input-firstName-lastName {
+          display: flex;
+          justify-content: space-between;
+
+          input {
+            width: 35%;
+          }
+        }
+      }
+    }
+  }
+}

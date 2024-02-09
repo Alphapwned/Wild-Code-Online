@@ -1,0 +1,153 @@
+@import "mixins.scss";
+
+.container-pricingPage-card {
+  @include flexCenterRow;
+  justify-content: space-evenly;
+  .container-background-pricingPage {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: url("../assets/img/Vector\ 256.png") bottom no-repeat;
+    z-index: -1;
+    background-size: 100%;
+    object-fit: cover;
+    bottom: 0;
+    @include breakpoint("<screen") {
+      background: none;
+    }
+  }
+  .container-card:first-child {
+    .border-top {
+      width: 100%;
+      height: 20px;
+      background-color: $grey;
+    }
+
+    hr {
+      background-color: $grey !important;
+      width: 80%;
+      height: 1px;
+    }
+
+    a {
+      color: $white;
+      background-color: $grey;
+      border: 1px solid $white;
+
+      &:hover {
+        color: $grey;
+        background-color: $white;
+        border: 1px solid $grey;
+      }
+    }
+  }
+  .container-card {
+    background-color: #fff;
+    transform: translateY(50%);
+    overflow: hidden;
+    margin: 0px 10px;
+    padding: 20px 25px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    @include flexCenterColumn;
+    position: relative;
+    width: 300px;
+
+    .border-top {
+      width: 100%;
+      height: 20px;
+      background-color: $primary;
+      position: absolute;
+      top: 0px;
+    }
+    .title {
+      margin-top: 20px !important;
+      font-size: 30px;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0;
+
+      @include breakpoint(phone) {
+        font-size: 25px;
+      }
+    }
+
+    .container-pricing {
+      padding: 15px 0px;
+      .price {
+        font-weight: 900;
+        font-size: 35px;
+        .devise {
+          position: relative;
+          top: -12px;
+          right: -2px;
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        span {
+          font-weight: 500;
+          font-size: 20px;
+        }
+
+        @include breakpoint(phone) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    hr {
+      background-color: $primary !important;
+      width: 80%;
+      height: 1px;
+      margin: 30px 0px 20px 0px;
+    }
+
+    a {
+      color: $white;
+      background-color: $primary;
+      border: 1px solid $white;
+      padding: 12px 15px;
+      border-radius: 15px;
+      text-decoration: none;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary;
+        background-color: $white;
+        border: 1px solid $primary;
+      }
+    }
+
+    .container-info {
+      .content-info {
+        padding-bottom: 15px;
+        @include flexCenterRow;
+        p {
+          padding-left: 10px;
+
+          @include breakpoint(phone) {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    @include breakpoint("<screen") {
+      transform: translateY(0%);
+      width: 320px;
+      margin: 30px;
+    }
+
+    @include breakpoint(phone) {
+      transform: translateY(0%);
+      width: 70%;
+      margin: 30px 0px;
+    }
+  }
+  @include breakpoint("<screen") {
+    @include flexCenterColumn;
+    margin-top: 30px;
+  }
+}
