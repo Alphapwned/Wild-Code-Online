@@ -30,9 +30,11 @@
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
     "@jest/globals": "^29.5.0",
+    "@playwright/test": "^1.41.2",
     "@types/faker": "^6.6.9",
     "@types/jest": "^29.5.2",
     "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^20.11.17",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "babel-jest": "^29.5.0",
     "eslint": "^8.23.0",
